@@ -1,31 +1,22 @@
+import { useGithubFetch } from "../../hooks/getGithubRepo";
+import { formatRelativeTime } from "../../utils/formatedDate";
+
+type Repo = {
+  id: number;
+  name: string;
+  visibility: string;
+  language: string;
+  size: number;
+  updated_at: string;
+}
+
+
 const Dashboard = () => {
-  const repositories = [
-    {
-      name: 'design-system',
-      language: 'React',
-      size: '7320 KB',
-      visibility: 'Public',
-      updatedAt: '1 day ago'
-    },
-    {
-      name: 'mobile-app',
-      language: 'Swift',
-      size: '3096 KB',
-      visibility: 'Public',
-      updatedAt: '3 days ago'
-    },
-    {
-      name: 'blog-website',
-      language: 'HTML/CSS',
-      size: '1876 KB',
-      visibility: 'Public',
-      updatedAt: '4 days ago'
-    }
-  ];
+  const { data, isLoading } = useGithubFetch("/users/Yash-jaiswal2509/repos") as { data: Repo[], isLoading: boolean, error: any };
 
   return (
-    <div className="h-[95vh] font-inter bg-[#FFFFFF] rounded-xl border border-[#E9EAEB]">
-      <div className="w-full mx-auto p-6">
+    <div className="h-[95vh] font-inter bg-[#FFFFFF] rounded-xl border border-[#E9EAEB] overflow-hidden">
+      <div className="w-full mx-auto p-7">
         <header className="flex justify-between items-center mb-6">
           <div>
             <h1 className=" text-black text-2xl font-semibold">Repositories</h1>
@@ -55,29 +46,33 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="">
-        {repositories.map((repo) => (
+      <div className="h-full overflow-auto scrollbar-hide">
+        {!isLoading && data.map((repo: Repo) => (
           <div
-            key={repo.name}
-            className="bg-white p-4 border-t-[1px] border-[#D5D7DA] hover:shadow-md transition-shadow"
+            key={repo.id}
+            className="bg-white p-4 font-inter border-t-[1px] border-[#D5D7DA] hover:shadow-md transition-shadow hover:bg-[#F5F5F5] cursor-pointer"
           >
             <div className="flex justify-between items-center">
               <div>
                 <div className="flex items-center gap-2">
-                  <h3 className="text-lg font-semibold text-gray-900">
+                  <h3 className="text-lg font-medium text-black">
                     {repo.name}
                   </h3>
-                  <span className="px-2 py-1 text-sm rounded-full bg-blue-100 text-blue-800">
-                    {repo.visibility}
+                  <span className="py-0.5 px-3 text-sm rounded-full bg-[#EFF8FF] text-blue-800 border-[#B2DDFF] border">
+                    {repo.visibility.charAt(0).toUpperCase() + repo.visibility.slice(1)}
                   </span>
                 </div>
-                <div className="flex items-center gap-4 mt-2 text-sm text-gray-600">
+                <div className="flex items-center gap-8 mt-2 text-sm text-gray-600">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-blue-500"></div>
                     {repo.language}
+                    <div className="w-2 h-2 rounded-full bg-primary"></div>
                   </div>
-                  <span>{repo.size}</span>
-                  <span>Updated {repo.updatedAt}</span>
+                  <span className="flex items-center gap-1">
+                    <img src="/assets/database.svg" alt="Database" />
+                    {repo.size}
+                    <p>KB</p>
+                  </span>
+                  <span>Updated {formatRelativeTime(repo.updated_at)}</span>
                 </div>
               </div>
             </div>
