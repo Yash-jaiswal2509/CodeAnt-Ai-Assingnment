@@ -1,14 +1,16 @@
 import Dashboard from "./Dashboard"
 import Sidebar from "./Sidebar"
+import SidebarMob from "./SidebarMob"
 
 const Home = () => {
 
     return (
-        <div className="flex">
+        <div className="flex lg:flex-row flex-col">
             <Sidebar />
-            <div className="flex-grow bg-[#FAFAFA] p-4">
+            <SidebarMob />
+            <div className="flex-grow bg-[#FAFAFA] lg:p-4">
                 <Dashboard />
-            </div>   
+            </div>
         </div>
     )
 }

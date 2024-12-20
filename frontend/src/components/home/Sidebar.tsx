@@ -3,19 +3,23 @@ import { BottomSidebarItems } from '../../utils/SidebarItems';
 
 const Sidebar = () => {
 
-
     return (
-        <aside className="w-64 bg-white border-r border-gray-200 flex flex-col h-screen">
-            {/* Logo */}
+        <aside className="w-64 bg-white border-r border-gray-200 flex-col h-screen lg:flex hidden">
             <div className="p-4">
                 <div className="flex items-center gap-3">
                     <img src="/logo.svg" alt="CodeAnt AI" className="w-7 h-8" />
                     <span className="font-satoshi text-2xl">CodeAnt AI</span>
                 </div>
+
+                <div className='flex items-center justify-between py-2 px-4 mt-5 rounded-lg font-inter text-sm border border-secondary shadow-sm'>
+                    <p className='text-ellipsis'>Yash Jaiswal</p>
+                    <img src="/assets/chevron-down.svg" alt="Down" />
+                </div>
             </div>
 
-            {/* Main navigation */}
-            <nav className="flex-1 p-4">
+
+
+            <nav className="flex-1 px-4">
                 <div className="space-y-1">
                     {TopSidebarItems.map((item) => (
                         <a
@@ -36,7 +40,6 @@ const Sidebar = () => {
                 </div>
             </nav>
 
-            {/* Bottom navigation */}
             <div className="p-4">
                 <div className="space-y-1">
                     {BottomSidebarItems.map((item) => (
