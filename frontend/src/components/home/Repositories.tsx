@@ -38,7 +38,7 @@ const Repositories = () => {
       </div>
 
       <div className="h-full overflow-auto scrollbar-hide">
-        {isLoading &&
+      {isLoading &&
           <div className="flex justify-center items-center h-[70vh]">
             <LoaderIcon className="animate-spin" size={30} />
           </div>
@@ -52,24 +52,24 @@ const Repositories = () => {
             <div className="flex justify-between items-center">
               <div>
                 <div className="flex items-center gap-2">
-                  <h3 className="text-lg font-medium text-black">
+                  <h3 className="sm:text-lg font-medium text-black">
                     {repo.name}
                   </h3>
-                  <span className="py-0.5 px-3 text-sm rounded-full bg-[#EFF8FF] text-blue-800 border-[#B2DDFF] border">
+                  <span className="py-0.5 px-3 text-xs sm:text-sm rounded-full bg-[#EFF8FF] text-blue-800 border-[#B2DDFF] border">
                     {repo.visibility.charAt(0).toUpperCase() + repo.visibility.slice(1)}
                   </span>
                 </div>
                 <div className="flex items-center gap-4 md:gap-8 mt-2 text-sm text-gray-600">
-                  <div className="flex items-center gap-2 md:text-base text-sm">
+                  <div className="flex items-center gap-2 md:text-base text-xs sm:text-sm">
                     {repo.language}
                     <div className="w-2 h-2 rounded-full bg-primary"></div>
                   </div>
-                  <span className="flex items-center gap-1 md:text-base text-sm">
+                  <span className="flex items-center gap-1 md:text-base text-xs sm:text-sm">
                     <img src="assets/database.svg" alt="Database" />
                     {repo.size}
                     <p>KB</p>
                   </span>
-                  <span className="md:text-base text-sm">Updated {formatRelativeTime(repo.updated_at)}</span>
+                  <span className="md:text-base sm:text-sm text-xs">Updated {formatRelativeTime(repo.updated_at)}</span>
                 </div>
               </div>
             </div>
