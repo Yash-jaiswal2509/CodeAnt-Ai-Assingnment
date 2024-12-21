@@ -1,5 +1,5 @@
-import { TopSidebarItems } from '../../utils/SidebarItems';
-import { BottomSidebarItems } from '../../utils/SidebarItems';
+import { TopSidebarItems } from '../../lib/SidebarItems';
+import { BottomSidebarItems } from '../../lib/SidebarItems';
 
 const Sidebar = () => {
 

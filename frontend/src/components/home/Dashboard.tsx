@@ -1,5 +1,5 @@
 import { useGithubFetch } from "../../hooks/getGithubRepo";
-import { formatRelativeTime } from "../../utils/formatedDate";
+import { formatRelativeTime } from "../../lib/formatedDate";
 
 const Dashboard = () => {
   const { data, isLoading } = useGithubFetch("/users/Yash-jaiswal2509/repos") as { data: Repo[], isLoading: boolean, error: any };
