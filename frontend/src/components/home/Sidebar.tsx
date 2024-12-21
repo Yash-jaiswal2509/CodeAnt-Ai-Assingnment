@@ -13,7 +13,7 @@ const Sidebar = () => {
 
                 <div className='flex items-center justify-between py-2 px-4 mt-5 rounded-lg font-inter text-sm border border-secondary shadow-sm'>
                     <p className='text-ellipsis'>Yash Jaiswal</p>
-                    <img src="/assets/chevron-down.svg" alt="Down" />
+                    <img src="assets/chevron-down.svg" alt="Down" />
                 </div>
             </div>
 
@@ -31,7 +31,7 @@ const Sidebar = () => {
                                 }`}
                         >
                             <img
-                                src={`/assets/${item.image}.svg`}
+                                src={`assets/${item.image}.svg`}
                                 alt={item.label}
                                 className="w-6 h-6" />
                             {item.label}
@@ -49,7 +49,7 @@ const Sidebar = () => {
                             className="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-sidebarText font-inter font-semibold hover:bg-gray-100"
                         >
                             <img
-                                src={`/assets/${item.icon}.svg`}
+                                src={`assets/${item.icon}.svg`}
                                 alt={item.label}
                                 className="w-6 h-6" />
                             {item.label}

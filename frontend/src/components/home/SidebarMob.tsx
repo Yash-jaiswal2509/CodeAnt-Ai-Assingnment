@@ -23,7 +23,7 @@ const SidebarMob = () => {
                         <DropdownMenuTrigger asChild>
                             <button className="focus:outline-none">
                                 <img 
-                                    src={isOpen ? "/assets/X.svg" : "/assets/mobileNav.svg"}
+                                    src={isOpen ? "assets/X.svg" : "assets/mobileNav.svg"}
                                     alt="Menu" 
                                     className="cursor-pointer" 
                                 />
@@ -35,41 +35,41 @@ const SidebarMob = () => {
                         >
                             <DropdownMenuLabel className='flex items-center justify-between py-2 px-4 rounded-lg font-inter text-sm border border-secondary shadow-sm'>
                                 <p className='text-ellipsis'>Yash Jaiswal</p>
-                                <img src="/assets/chevron-down.svg" alt="Down" />
+                                <img src="assets/chevron-down.svg" alt="Down" />
                             </DropdownMenuLabel>
 
                             <DropdownMenuItem className="flex items-center gap-3 px-5 mt-2">
-                                <img src="/assets/home-black.svg" alt="Repo" />
+                                <img src="assets/home-black.svg" alt="Repo" />
                                 <span>Repositories</span>
                             </DropdownMenuItem>
 
                             <DropdownMenuItem className="flex items-center gap-3 px-5">
-                                <img src="/assets/code.svg" alt="Code" />
+                                <img src="assets/code.svg" alt="Code" />
                                 <span>AI Code Review</span>
                             </DropdownMenuItem>
 
                             <DropdownMenuItem className="flex items-center gap-3 px-5">
-                                <img src="/assets/cloud.svg" alt="Cloud" />
+                                <img src="assets/cloud.svg" alt="Cloud" />
                                 <span>Cloud Security</span>
                             </DropdownMenuItem>
 
                             <DropdownMenuItem className="flex items-center gap-3 px-5">
-                                <img src="/assets/docs.svg" alt="How to Use" />
+                                <img src="assets/docs.svg" alt="How to Use" />
                                 <span>How to Use</span>
                             </DropdownMenuItem>
 
                             <DropdownMenuItem className="flex items-center gap-3 px-5">
-                                <img src="/assets/settings.svg" alt="Settings" />
+                                <img src="assets/settings.svg" alt="Settings" />
                                 <span>Settings</span>
                             </DropdownMenuItem>
 
                             <DropdownMenuItem className="flex items-center gap-3 px-5">
-                                <img src="/assets/phone.svg" alt="Support" />
+                                <img src="assets/phone.svg" alt="Support" />
                                 <span>Support</span>
                             </DropdownMenuItem>
 
                             <DropdownMenuItem className="flex items-center gap-3 px-5">
-                                <img src="/assets/logout.svg" alt="Logout" />
+                                <img src="assets/logout.svg" alt="Logout" />
                                 <span>Logout</span>
                             </DropdownMenuItem>
                         </DropdownMenuContent>

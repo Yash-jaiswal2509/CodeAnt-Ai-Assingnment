@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { ArrowUp, icons } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { useState } from "react";
 
 const LoginPage = () => {
@@ -34,7 +34,7 @@ const LoginPage = () => {
 
           <div className="bg-white rounded-3xl py-4 px-7 w-3/5 absolute -right-5 top-[150px] shadow-custom-light">
             <div className="flex items-center justify-between gap-4 mb-2">
-              <img src="/assets/chart.svg" alt="" />
+              <img src="assets/chart.svg" alt="" />
               <div className="flex flex-col items-center">
                 <div className="text-sm flex text-[#0049C6] font-bold items-center gap-1">
                   <ArrowUp strokeWidth={3} size={14} /> 14%
@@ -51,7 +51,7 @@ const LoginPage = () => {
         </div>
 
         <div className="absolute bottom-0 left-0">
-          <img src="/assets/subtract.svg" alt="" className="2xl:size-full xl:size-[80%] size-[70%]" />
+          <img src="assets/subtract.svg" alt="" className="2xl:size-full xl:size-[80%] size-[70%]" />
         </div>
       </div>
 
@@ -64,7 +64,7 @@ const LoginPage = () => {
             </div>
             <h1 className="text-2xl md:text-3xl font-bold mb-8">Welcome to CodeAnt AI</h1>
 
-            <div className="flex gap-4 font-semibold relative">
+            <div className="flex font-semibold relative">
               <div
                 className={cn(
                   "absolute top-0 w-1/2 h-full bg-primary rounded-lg transition-transform duration-500 ease-in-out",
@@ -106,7 +106,7 @@ const LoginPage = () => {
                 key={provider.name}
                 className="w-full flex items-center justify-center gap-3 py-2 px-4 border rounded-lg bg-white hover:bg-gray-50"
               >
-                <img src={`/assets/${provider.icon}.svg`} alt={provider.name} />
+                <img src={`assets/${provider.icon}.svg`} alt={provider.name} />
                 Sign in with {provider.name}
               </button>
             ))}
@@ -121,7 +121,7 @@ const LoginPage = () => {
                 key={provider.name}
                 className="w-full flex items-center justify-center gap-3 py-2 px-4 border rounded-lg bg-white hover:bg-gray-50"
               >
-                <img src={`/assets/${provider.icon}.svg`} alt={provider.name} />
+                <img src={`assets/${provider.icon}.svg`} alt={provider.name} />
                 {(provider.name === "GitLab" ? "Self Hosted" : "Sign in with") + " " + provider.name}
               </button>
             ))}
